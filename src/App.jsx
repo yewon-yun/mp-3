@@ -2,6 +2,12 @@ import Header from "./components/Header.jsx";
 import styled, { createGlobalStyle } from "styled-components";
 import Footer from "./components/Footer.jsx";
 import Nav from "./components/Nav.jsx";
+import Main from "./components/Main.jsx";
+import Home from "./components/Home.jsx";
+import Education from "./components/Education.jsx";
+import Experience from "./components/Experiences.jsx";
+import Project from "./components/Projects.jsx";
+import Certificate from "./components/Certificates.jsx";
 
 const GlobalStyles = createGlobalStyle`
   * {
@@ -28,6 +34,14 @@ const PageWrapper = styled.div`
   width: 85%;
 `;
 
+const Wrap = styled.div`
+  display: flex;
+
+  @media screen and (max-width: 1000px) {
+    flex-direction: column;
+  }
+`;
+
 export default function App() {
   return (
     <>
@@ -35,7 +49,13 @@ export default function App() {
 
       <PageWrapper>
         <Header />
-        <Nav/>
+          <Wrap>
+              <Nav/>
+              <Main>
+                  <Certificate />
+              </Main>
+          </Wrap>
+
         <Footer />
       </PageWrapper>
     </>
