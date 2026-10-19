@@ -1,4 +1,5 @@
 import Exp from "./Exp.jsx";
+import Calculator from "./Calculator.jsx";
 
 export default function Project() {
     return (
@@ -41,6 +42,9 @@ export default function Project() {
                     <li>Implemented the game and integrated original artwork and interactions in Unity using C#.</li>
                 </ul>
             </div>
+
+            <Calculator />
+
         </Exp>
     )
 }
