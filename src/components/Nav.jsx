@@ -59,12 +59,12 @@ export default function Nav() {
     return (
         <StyledNav>
             <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/education">Education</a></li>
-                <li><a href="/experiences">Experience</a></li>
-                <li><a href="/projects">Project</a></li>
-                <li><a href="/photography">Photography</a></li>
-                <li><a href="/certificates">Certificates</a></li>
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="/education">Education</Link></li>
+                <li><Link to="/experiences">Experience</Link></li>
+                <li><Link to="/projects">Project</Link></li>
+                <li><Link to="/photography">Photography</Link></li>
+                <li><Link to="/certificates">Certificates</Link></li>
             </ul>
         </StyledNav>
     );

@@ -1,14 +1,13 @@
-import Header from "./components/Header.jsx";
-import styled, { createGlobalStyle } from "styled-components";
-import Footer from "./components/Footer.jsx";
-import Nav from "./components/Nav.jsx";
-import Main from "./components/Main.jsx";
-import Home from "./components/Home.jsx";
-import Education from "./components/Education.jsx";
-import Experience from "./components/Experiences.jsx";
-import Project from "./components/Projects.jsx";
-import Certificate from "./components/Certificates.jsx";
-import Photography from "./components/Photography.jsx";
+import { createGlobalStyle } from "styled-components";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Root from "./components/Root";
+
+const router = createBrowserRouter([
+    {
+        path: "*",
+        Component: Root
+    }
+]);
 
 const GlobalStyles = createGlobalStyle`
   * {
@@ -28,37 +27,13 @@ const GlobalStyles = createGlobalStyle`
   }
 `;
 
-const PageWrapper = styled.div`
-  background-color: #ebf4f4;
-  margin: 0 auto;
-  height: 100%;
-  width: 85%;
-`;
 
-const Wrap = styled.div`
-  display: flex;
-
-  @media screen and (max-width: 1000px) {
-    flex-direction: column;
-  }
-`;
 
 export default function App() {
   return (
     <>
       <GlobalStyles/>
-
-      <PageWrapper>
-        <Header />
-          <Wrap>
-              <Nav/>
-              <Main>
-                  <Photography />
-              </Main>
-          </Wrap>
-
-        <Footer />
-      </PageWrapper>
+      <RouterProvider router={router} />
     </>
   )
 }
