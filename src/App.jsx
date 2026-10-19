@@ -8,6 +8,7 @@ import Education from "./components/Education.jsx";
 import Experience from "./components/Experiences.jsx";
 import Project from "./components/Projects.jsx";
 import Certificate from "./components/Certificates.jsx";
+import Photography from "./components/Photography.jsx";
 
 const GlobalStyles = createGlobalStyle`
   * {
@@ -52,7 +53,7 @@ export default function App() {
           <Wrap>
               <Nav/>
               <Main>
-                  <Certificate />
+                  <Photography />
               </Main>
           </Wrap>
 
